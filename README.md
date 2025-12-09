@@ -106,9 +106,11 @@ yourrepo/
 
 ## 1. Setup Environment
 
+```md
 # Clone the repository
 git clone <repository-url> census_app
 cd census_app
+```
 
 
 ## 2. Obtaining API
