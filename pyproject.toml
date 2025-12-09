@@ -1,0 +1,23 @@
+[project]
+name = "final-project-genai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "langchain-openai>=1.1.0",
+    "langchain>=1.1.0",
+    "pandas>=2.3.3",
+    "python-dotenv>=1.2.1",
+    "streamlit>=1.51.0",
+    "faiss-cpu==1.9.0",
+    "langchain-community>=0.4.1",
+    "geopandas>=1.1.1",
+    "folium>=0.20.0",
+    "streamlit-folium>=0.25.3",
+    "matplotlib>=3.10.7",
+    "fpdf>=1.7.2",
+    "seaborn>=0.13.2",
+    "ruff>=0.14.7",
+    "wikipedia>=1.4.0",
+]
