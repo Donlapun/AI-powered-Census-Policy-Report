@@ -40,68 +40,68 @@ Streamlit Interface is being used for this application,
 <summary><strong>For Technical Users</strong></summary>
 
 1. User Input Parsing
+
+
 User submit query that must contain topic, location, and year. The app use LLM-based
 prompt-engineered to parse neccessary information for query (topic, geography_type, geography_name, state_name, year)
 
 2. Geographic Identification (FIPS Lookup)
+
+
 The extracted geographic location is passed to get_fips that finds
 - state FIPS
 - county FIPS (if applicable)
 to ensure valid geographic identification for Census API Query.
+
+
 If geographic location is "place" ReAct agent (with Census Geocode and Wikipedia as tools) is called to help find counties of the location. 
 
 3. Topic Identification
+
+
 Topics are mapped to appropriated census variable prefixes such as B01001 by using LLM-based
 prompt-engineered. The variables then expended to retreivable format using format_tables()
 
 4. Census API Retrieval
+
+
 Data is pulling using fetch_census_data() which created to pull information in Census API Query
 Data is in Pandas DataFrame then column names are cleaned via LLM-based
 prompt-engineered for human-readable format
 
 5. Data Processing and Visualization
+
+
 The cleaned DatFrame is then used to create
 1. Summary Statistics
 2. Interactive Visualization that contain choropleth map histograms and correlation matrix.
 
 6. Generated Policy Report 
+
+
 To generate the policy for pulled data we use the following Agents:
-1. Data Analysis Agent which highlights pattern and trends found in the data
-2. Evidence Supporting Agent which finds information that support the result from Data Analysis Agent
-3. Policy Report Agent which using information from Data Analysis Agent and Evidence Supporting Agent to create Polic Report for target audience
+-  Data Analysis Agent which highlights pattern and trends found in the data
+-  Evidence Supporting Agent which finds information that support the result from Data Analysis Agent
+-  Policy Report Agent which using information from Data Analysis Agent and Evidence Supporting Agent to create Policy Report for target audience
 
 
 [This architecture workflow](https://miro.com/app/board/uXjVJhG6qgo=/?share_link_id=654536978263) also shows how the app processes user input and deliver different pieces of the policy report.
 
-
+<details>
 
 # Directory Structure
-yourrepo/
-│
-├── census_rag.py     # Dependencies + CLI entry point defined here
-├── utils.py          # Helper functions used by the app 
-├── pyproject.toml    # Dependencies + CLI entry point defined here
-├── uv.lock           # uv lockfile for reproducible environments
-└── .env              # User-provided environment variables
+
+<pre> ``` yourrepo/ ├── census_rag.py # Dependencies + CLI entry point defined here ├── utils.py # Helper functions used by the app ├── pyproject.toml # Dependencies + CLI entry point defined here ├── uv.lock # uv lockfile for reproducible environments └── .env # User-provided environment variables ``` </pre>
 
 
 # Set up
 
 ## 1. Setup Environment
-```md
+
 # Clone the repository
 git clone <repository-url> census_app
 cd census_app
 
-# Before running the app, create a `.env` file in the project root directory.  
-# This file will store your API keys and configuration settings.
-
-# Create a new file named **`.env`** and add the following:
-
-OPENAI_API_KEY=your_openai_api_key_here
-CENSUS_API_KEY=your_census_api_key_here
-
-```
 
 ## 2. Obtaining API
 
