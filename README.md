@@ -87,11 +87,19 @@ To generate the policy for pulled data we use the following Agents:
 
 [This architecture workflow](https://miro.com/app/board/uXjVJhG6qgo=/?share_link_id=654536978263) also shows how the app processes user input and deliver different pieces of the policy report.
 
-<details>
+</details>
 
 # Directory Structure
 
-<pre> ``` yourrepo/ ├── census_rag.py # Dependencies + CLI entry point defined here ├── utils.py # Helper functions used by the app ├── pyproject.toml # Dependencies + CLI entry point defined here ├── uv.lock # uv lockfile for reproducible environments └── .env # User-provided environment variables ``` </pre>
+<pre>
+yourrepo/
+├── census_rag.py   # Dependencies + CLI entry point defined here
+├── utils.py        # Helper functions used by the app
+├── pyproject.toml  # Dependencies + CLI entry point defined here
+├── uv.lock         # uv lockfile for reproducible environments
+└── .env            # User-provided environment variables
+</pre>
+
 
 
 # Set up
