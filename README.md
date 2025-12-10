@@ -140,6 +140,8 @@ CENSUS_API_KEY=your_census_api_key_here
 uv sync
 ```
 
+Please note that if you run into `pyproj`, we recommend using the SSH (UChicago) server or install PROJ
+
 To run the Census App, 
 
 ```md
