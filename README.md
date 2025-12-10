@@ -17,7 +17,8 @@ provide location, year, and topic of interests.
 
 This is an quick demo of the AI-Powered US Census Data Query and Policy Report App
 
-- Add video here 
+[AI-Powered US Census Data Query and Policy Report App Demo](https://youtu.be/fAYnABqNRzw)
+ 
 
 # How does it work?
 
