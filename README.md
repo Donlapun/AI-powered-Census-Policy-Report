@@ -74,8 +74,8 @@ prompt-engineered for human-readable format
 
 
 The cleaned DatFrame is then used to create
-1. Summary Statistics
-2. Interactive Visualization that contain choropleth map histograms and correlation matrix.
+- Summary Statistics
+- Interactive Visualization that contain choropleth map histograms and correlation matrix.
 
 6. Generated Policy Report 
 
