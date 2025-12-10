@@ -13,7 +13,7 @@ provide location, year, and topic of interests.
 - Availability for Downloading Data
 - Built with Streamlit and Open AI
 
-# Appy Demo
+# App Demo
 
 This is an quick demo of the AI-Powered US Census Data Query and Policy Report App
 
