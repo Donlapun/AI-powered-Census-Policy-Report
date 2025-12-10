@@ -2,7 +2,7 @@
 
 This AI-powered tool allows users to input their questions about the U.S. Census
 Data and instantly pull the data, illustrates the summary statistics and visualization, 
-and generate the policy reporr highlights trends with supporting evidence by simply 
+and generate the policy report highlights trends with supporting evidence by simply 
 provide location, year, and topic of interests.
 
 # App Features
